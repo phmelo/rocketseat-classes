@@ -1,4 +1,4 @@
-module.exports = {
+/*module.exports = {
   env: {
     es6: true,
   },
@@ -23,8 +23,41 @@ module.exports = {
       'warn',
       {
         etensions: ['.jsx', '.js'],
-      },
+      }
     ],
     'import/prefer-default-export': 'off',
   },
+};
+*/
+
+module.exports = {
+  env: {
+    es6: true
+  },
+  extends: ['airbnb', 'prettier', 'prettier/react'],
+  globals: {
+    Atomics: 'readonly',
+    SharedArrayBuffer: 'readonly',
+    __DEV__: 'readonly'
+  },
+  // faz com que entenda as últimas versões do JS
+  parser: 'babel-eslint',
+  parserOptions: {
+    ecmaFeatures: {
+      jsx: true
+    },
+    ecmaVersion: 2018,
+    sourceType: 'module'
+  },
+  plugins: ['react', 'prettier'],
+  rules: {
+    'prettier/prettier': 'error',
+    'react/jsx-filename-extension': [
+      'warn',
+      {
+        extensions: ['.jsx', '.js']
+      }
+    ],
+    'import/prefer-default-export': 'off'
+  }
 };
