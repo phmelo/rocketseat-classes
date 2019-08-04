@@ -106,7 +106,7 @@ export default class Main extends Component {
             <User>
               <Avatar source={{ uri: item.avatar }} />
               <Name>{item.name}</Name>
-              <Bio>{item.Bio}</Bio>
+              <Bio>{item.bio}</Bio>
               <ProfileButton onPress={() => this.handleNavigate(item)}>
                 <ProfileButtonText>Ver perfil</ProfileButtonText>
               </ProfileButton>
